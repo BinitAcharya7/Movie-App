@@ -1,7 +1,12 @@
+import Thumbnail from './Thumbnail'
 
-function Results() {
+function Results({ results }) {
   return (
-    <div>Results</div>
+    <div>
+        {results[1]?.id}
+        {/* <Thumbnail /> */}
+        
+    </div>
   )
 }
 
