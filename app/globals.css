@@ -11,3 +11,7 @@ body {
   margin: 0;
 }
 
+@theme {
+  --breakpoint-3xl: 1700px;
+}
+

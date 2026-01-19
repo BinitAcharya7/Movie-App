@@ -4,7 +4,7 @@ import {HandThumbUpIcon} from "@heroicons/react/24/outline";
 function Thumbnail({ result }) {
   const absPath= 'https://image.tmdb.org/t/p/original/'
   return (
-    <div className="p-2 group cursor-pointer">
+    <div className="p-2 group cursor-pointer transition duration-200 ease-in transform sm:hover:scale-105 hover:z-100">
         <Image layout="responsive"
         height={1080} width={1920} src={`${absPath}${result.poster_path || result.backdrop_path}`} alt = {`Poster of ${result.title || result.original_name}`} />
         <div className="p-2">
