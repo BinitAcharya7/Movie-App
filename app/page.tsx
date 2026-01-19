@@ -12,7 +12,8 @@ export const metadata: Metadata = {
 export default async function Home({ searchParams }: { searchParams: { genre?: string } }) {
 
   // read genre from search params (optional)
-  const genre = searchParams?.genre;
+  const params = await searchParams;
+  const genre = params.genre;
 
   // pick request config, fallback to fetchTrending
   const request = requests[genre as keyof typeof requests] ?? requests.fetchTrending;
