@@ -12,6 +12,6 @@ body {
 }
 
 @theme {
-  --breakpoint-3xl: 1700px;
+  --breakpoint-3xl: 125rem;
 }
 

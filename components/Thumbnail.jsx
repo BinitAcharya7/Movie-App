@@ -1,12 +1,16 @@
 import Image from "next/image"
 import {HandThumbUpIcon} from "@heroicons/react/24/outline";
 
-function Thumbnail({ result }) {
+function Thumbnail({ result ,ref }) {
   const absPath= 'https://image.tmdb.org/t/p/original/'
   return (
-    <div className="p-2 group cursor-pointer transition duration-200 ease-in transform sm:hover:scale-105 hover:z-100">
-        <Image layout="responsive"
-        height={1080} width={1920} src={`${absPath}${result.poster_path || result.backdrop_path}`} alt = {`Poster of ${result.title || result.original_name}`} />
+    <div ref={ref} className="p-2 group cursor-pointer transition duration-200 ease-in transform sm:hover:scale-105 hover:z-100">
+        <Image 
+        height={1080} 
+        width={1920} 
+        src={`${absPath}${result.poster_path || result.backdrop_path}`} 
+        alt = {`Poster of ${result.title || result.original_name}`} 
+        className="w-full h-auto rounded-xl" />
         <div className="p-2">
 
         <p className="truncate max-w-md">{result.overview}</p>
